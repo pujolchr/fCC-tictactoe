@@ -1,0 +1,134 @@
+.App {
+  display: flex;
+}
+
+.before {
+  width: calc(40vw - 50vh);
+  height: 100vh;
+}
+
+.game {
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: #1ec503;
+  font-family: 'VT323', monospace;
+  display: flex;
+  width: calc(60vw + 50vh);
+  max-width: 150vh;
+  height: 100vh;
+}
+.gui {
+  display: flex;
+  flex-direction: column;
+  width: 50vh;
+}
+
+.board {
+  margin: 1vh;
+  border-style: hidden;
+  border-collapse: collapse;
+}
+
+.control-board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.square,
+.control-btn {
+  cursor: pointer;
+  font-size: 10vh;
+  padding: 0;
+  border-spacing: 0;
+  border: 1vh solid black;
+  width: 15vh;
+  height: 15vh;
+  text-align: center;
+  color: #1ec503;
+  background-color: black;
+}
+.square {
+  background-color: white;
+}
+
+.square:hover {
+  color: white;
+  background-color: #1ec503;
+}
+
+.control-btn:hover {
+  color: black;
+  background-color: #1ec503;
+}
+
+.term {
+  margin: 1%;
+  border: 1px solid #1ec503;
+  height: 96vh;
+  background-color: black;
+}
+
+.term-form {
+  color: black;
+  background-color: #1ec503;
+}
+
+.term-row{
+  font-size: 6vh;
+  width: 60vw;
+  height: 8vh;
+}
+
+input[type=text] {
+  font-family: 'VT323', monospace;
+  font-size: 6vh;
+  width: 90%;
+  color: black;
+  background-color: #1ec503;
+  border: none;
+}
+
+
+@media screen and (orientation:portrait) {
+  .App {
+    flex-direction: column;
+  }
+  .before {
+    display: none;
+  }
+  .game {
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+  }
+  .gui {
+    flex-direction: row;
+    width: 100vw;
+    height: 50vw;
+  }
+  .board {
+    width: 50vw;
+  }
+  .square,
+  .control-btn {
+    padding: 0;
+    border: 1vw solid black;
+    width: 15vw;
+    height: 15vw;
+    font-size: 10vw;
+  }
+  .term {
+    height: calc(98vh - 50vw);
+  }
+  .term-row{
+    width: 98vw;
+    height: calc(8vh - 4vw);
+    font-size:calc(6vh - 3vw);
+  }
+  input[type=text] {
+    height: calc(8vh - 4vw);
+    font-size:calc(6vh - 3vw);
+  }
+}
